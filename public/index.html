@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trinity Family Builders Raffle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Sorts+Mill+Goudy:ital@0;1&display=swap">
+<style>
+  :root{color-scheme:light}
+  body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}
+  img{max-width:100%}
+  [hidden]:not([hidden=until-found i]){display:none!important}
+</style>
+<style id="page-style">
+  :root{
+    --ink:#002a53; --ink-soft:#35506e; --muted:#6b7278;
+    --paper:#ffffff; --surface:#ffffff; --surface-2:#eef0f1; --line:#dcdcdb;
+    --gold:#f3b22a; --gold-ink:#4a3106; --gold-soft:#fbecc9;
+    --blue:#2e6faa; --blue-soft:#e7f0f8; --blue-ink:#153c5c;
+    --danger:#c0392b; --danger-soft:#fbe4df;
+    --focus:#2e6faa;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#eef2f5; --ink-soft:#c3d1dd; --muted:#93a0ab;
+      --paper:#00203f; --surface:#06335f; --surface-2:#0a3d6e; --line:#254a6c;
+      --gold:#f3b22a; --gold-ink:#3a2504; --gold-soft:#3d2c0c;
+      --blue:#79b0dd; --blue-soft:#0f3f66; --blue-ink:#d7e8f5;
+      --danger:#e2695b; --danger-soft:#3a1e18;
+      --focus:#79b0dd;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#eef2f5; --ink-soft:#c3d1dd; --muted:#93a0ab;
+    --paper:#00203f; --surface:#06335f; --surface-2:#0a3d6e; --line:#254a6c;
+    --gold:#f3b22a; --gold-ink:#3a2504; --gold-soft:#3d2c0c;
+    --blue:#79b0dd; --blue-soft:#0f3f66; --blue-ink:#d7e8f5;
+    --danger:#e2695b; --danger-soft:#3a1e18;
+    --focus:#79b0dd;
+    color-scheme: dark;
+  }
+
+  #app, #app *{ box-sizing:border-box; }
+  #app{
+    background:var(--paper); color:var(--ink);
+    font-family:"Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height:1.5; min-height:100%;
+    padding:32px 20px 64px;
+  }
+  #app h1,#app h2,#app h3{
+    font-family:"Sorts Mill Goudy", Georgia, "Times New Roman", serif; text-wrap:balance; margin:0;
+  }
+  #app a{ color:var(--blue); }
+  #app :focus-visible{ outline:2px solid var(--focus); outline-offset:2px; border-radius:4px; }
+
+  .wrap{ max-width:640px; margin:0 auto; }
+  .wrap.wide{ max-width:960px; }
+
+  .eyebrow{
+    font-size:.78rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--blue); margin-bottom:10px;
+  }
+  .hero h1{ font-size:clamp(1.9rem,5vw,2.6rem); font-weight:600; color:var(--ink); }
+  .hero .prize{
+    margin-top:14px; font-size:1.05rem; color:var(--ink-soft);
+  }
+  .hero .prize b{ color:var(--ink); font-weight:600; }
+  .brand-logo{ display:block; height:auto; }
+  .hero .brand-logo{ width:210px; max-width:60%; margin-bottom:16px; }
+  .centered-logo{ margin:0 auto 16px; }
+  .centered-logo.brand-logo{ width:170px; max-width:55%; }
+  .admin-bar .brand-logo{ width:130px; margin-bottom:0; }
+  .logo-dark{ display:none; }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .logo-light{ display:none; }
+    :root:not([data-theme="light"]) .logo-dark{ display:block; }
+  }
+  :root[data-theme="dark"] .logo-light{ display:none; }
+  :root[data-theme="dark"] .logo-dark{ display:block; }
+  .eho-logo{ width:64px; margin:0 auto 12px; }
+  .legal-foot{ margin-top:32px; text-align:center; }
+  .legal-foot .legal{ margin-top:8px; }
+
+  .ticket{
+    background:var(--surface); border:1px solid var(--line); border-radius:18px;
+    margin-top:28px; overflow:hidden;
+    box-shadow:0 1px 2px rgba(20,20,10,.04), 0 10px 30px -18px rgba(20,20,10,.25);
+  }
+  .ticket-hero{ padding:24px 24px 28px; }
+  .ticket-divider{ position:relative; height:0; border-top:2px dashed var(--line); }
+  .ticket-divider::before,.ticket-divider::after{
+    content:""; position:absolute; top:-11px; width:22px; height:22px; border-radius:50%;
+    background:var(--paper);
+  }
+  .ticket-divider::before{ left:-11px; }
+  .ticket-divider::after{ right:-11px; }
+  .ticket-form{ padding:26px 24px 24px; }
+
+  .field{ margin-bottom:18px; }
+  .field label{ display:block; font-weight:600; font-size:.92rem; margin-bottom:6px; }
+  .field .req{ color:var(--danger); }
+  .field input[type=text], .field input[type=email], .field input[type=tel]{
+    width:100%; padding:12px 14px; font-size:1rem; font-family:inherit; color:var(--ink);
+    background:var(--surface-2); border:1px solid var(--line); border-radius:10px;
+    transition:border-color .15s ease;
+  }
+  .field input:focus{ border-color:var(--blue); }
+  .field .err{ color:var(--danger); font-size:.85rem; margin-top:6px; display:none; }
+  .field.invalid input{ border-color:var(--danger); }
+  .field.invalid .err{ display:block; }
+  .row2{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:420px){ .row2{ grid-template-columns:1fr; } }
+
+  .consent{
+    display:flex; gap:12px; align-items:flex-start; padding:14px; background:var(--blue-soft);
+    border-radius:12px; margin-bottom:20px;
+  }
+  .consent input{ margin-top:3px; width:18px; height:18px; accent-color:var(--blue); flex:none; }
+  .consent .txt{ font-size:.86rem; color:var(--ink-soft); }
+  .consent.invalid{ outline:1.5px solid var(--danger); }
+
+  .btn{
+    appearance:none; border:none; border-radius:12px; font-family:inherit; font-weight:700;
+    font-size:1rem; padding:14px 20px; cursor:pointer; width:100%;
+    transition:transform .08s ease, opacity .15s ease;
+    display:inline-block; text-decoration:none; text-align:center; box-sizing:border-box;
+  }
+  .btn:active{ transform:scale(.99); }
+  .btn:disabled{ opacity:.55; cursor:not-allowed; }
+  .btn-primary{ background:var(--gold); color:var(--gold-ink); }
+  .btn-secondary{ background:var(--surface-2); color:var(--ink); border:1px solid var(--line); }
+  .confirm-cta{ margin-top:24px; padding-top:22px; border-top:1px dashed var(--line); }
+  .confirm-cta-label{ font-size:.78rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--blue); margin-bottom:10px; }
+  .btn-danger{ background:var(--danger-soft); color:var(--danger); border:1px solid var(--danger); }
+  .btn-small{ width:auto; padding:9px 14px; font-size:.88rem; }
+
+  .status-line{ margin-top:14px; font-size:.88rem; color:var(--muted); text-align:center; min-height:1.2em; }
+  .status-line.error{ color:var(--danger); }
+
+  .confirm{ text-align:center; padding:48px 24px; }
+  .confirm .check{ width:56px; height:56px; margin:0 auto 18px; color:var(--blue); }
+  .confirm h2{ font-size:1.6rem; }
+  .confirm p{ color:var(--ink-soft); margin-top:10px; }
+
+  .foot-link{
+    text-align:center; margin-top:34px; font-size:.82rem; color:var(--muted);
+  }
+  .foot-link button{
+    background:none; border:none; color:var(--muted); text-decoration:underline; cursor:pointer;
+    font:inherit; padding:0;
+  }
+  .legal{ margin-top:16px; font-size:.76rem; color:var(--muted); text-align:center; }
+
+  /* Admin */
+  .admin-bar{
+    display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:22px; flex-wrap:wrap;
+  }
+  .admin-bar h1{ font-size:1.5rem; }
+  .gate{
+    max-width:360px; margin:60px auto; background:var(--surface); border:1px solid var(--line);
+    border-radius:14px; padding:26px;
+  }
+  .gate h2{ font-size:1.2rem; margin-bottom:14px; }
+  .stat-row{ display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-bottom:24px; }
+  .stat{
+    background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:16px;
+  }
+  .stat .n{ font-family:"Sorts Mill Goudy",Georgia,serif; font-size:1.8rem; font-variant-numeric:tabular-nums; }
+  .stat .l{ font-size:.78rem; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; margin-top:2px; }
+
+  .panel{ background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:20px; margin-bottom:20px; }
+  .panel h3{ font-size:1.05rem; margin-bottom:12px; }
+  .panel-actions{ display:flex; gap:10px; flex-wrap:wrap; }
+  .panel-actions .btn{ width:auto; }
+
+  .winners-card{ background:var(--gold-soft); border:1px solid var(--gold); border-radius:14px; padding:20px; margin-bottom:20px; }
+  .winners-card h3{ color:var(--gold-ink); margin-bottom:12px; }
+  .winner-row{ display:flex; justify-content:space-between; gap:10px; padding:10px 0; border-top:1px dashed rgba(0,0,0,.15); font-size:.94rem; }
+  .winner-row:first-of-type{ border-top:none; }
+  .winner-row .name{ font-weight:700; }
+  .winner-row .contact{ color:var(--ink-soft); font-size:.85rem; }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table{ width:100%; border-collapse:collapse; font-size:.88rem; min-width:640px; }
+  th,td{ text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  th{ background:var(--surface-2); font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); }
+  tr:last-child td{ border-bottom:none; }
+  .badge{ display:inline-block; padding:2px 9px; border-radius:999px; font-size:.74rem; font-weight:700; }
+  .badge-yes{ background:var(--blue-soft); color:var(--blue-ink); }
+  .badge-no{ background:var(--surface-2); color:var(--muted); }
+  .badge-win{ background:var(--gold); color:var(--gold-ink); }
+  .empty{ padding:28px; text-align:center; color:var(--muted); }
+
+  .confirm-box{ background:var(--danger-soft); border:1px solid var(--danger); border-radius:12px; padding:16px; margin-top:14px; }
+  .confirm-box p{ margin:0 0 12px; font-size:.9rem; }
+  .confirm-box input{ width:100%; padding:9px 12px; border-radius:8px; border:1px solid var(--line); margin-bottom:10px; font:inherit; }
+
+  .gate-error{ color:var(--danger); font-size:.85rem; margin-top:8px; display:none; }
+  .gate-error.show{ display:block; }
+  .gate input{ width:100%; padding:11px 13px; border-radius:9px; border:1px solid var(--line); font:inherit; margin-bottom:12px; background:var(--surface-2); color:var(--ink); }
+</style>
+</head>
+<body>
+<div id="app" role="main"></div>
+
+<!-- Netlify Forms detection: a static duplicate of the entry form so Netlify's
+     build-time bot registers it, even though the real form is rendered by JS. -->
+<form name="raffle-entry" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="text" name="firstName" />
+  <input type="text" name="lastName" />
+  <input type="email" name="email" />
+  <input type="tel" name="phone" />
+  <input type="checkbox" name="consent" />
+  <input name="bot-field" />
+</form>
+
+<script src="logos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
