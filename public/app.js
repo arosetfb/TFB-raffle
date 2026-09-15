@@ -83,7 +83,7 @@
           '<p class="legal">No purchase necessary to enter or win. Open to Florida residents 18 years of age or older, except employees of Trinity Family Builders and their immediate family members. Limit one entry per person. Two winners will be selected at random from all eligible entries and notified using the contact information provided. Trinity Family Builders reserves the right to substitute a prize of equal or greater value. Void where prohibited by law.</p>' +
           '<p class="legal">By entering, you agree to Trinity Family Builders using your information to contact you about this raffle and, if you opted in above, for future marketing.</p>' +
         '</div>' +
-        '<div class="foot-link"><button type="button" id="staff-link">Event staff</button></div>' +
+        '<div class="foot-link"><button type="button" id="staff-link">Admin Login</button></div>' +
       '</div>';
 
     document.getElementById('entry-form').addEventListener('submit', onSubmit);
