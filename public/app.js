@@ -48,7 +48,7 @@
           trinityLogoHtml() +
           '<div class="eyebrow">Raffle Entry</div>' +
           '<h1>Enter to Win a Gift Card</h1>' +
-          '<p class="prize">We’re giving away <b>two gift cards</b>. Fill out the ticket below for your chance to win!</p>' +
+          '<p class="prize">Enter for a chance to win a <b>gift card</b>. Winners will be chosen at the end of the event, so stick around to see if you win. If you’re not able to stay, we’ll reach out using the contact info you leave below.</p>' +
         '</div>' +
         '<div class="ticket">' +
           '<div class="ticket-hero"><div class="eyebrow" style="margin-bottom:0">Your entry ticket</div></div>' +
